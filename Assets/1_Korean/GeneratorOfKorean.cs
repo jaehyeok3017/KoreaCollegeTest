@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Generator : MonoBehaviour
+public class GeneratorOfKorean : MonoBehaviour
 {
     public List<GameObject> objectsList = new List<GameObject>();
     private List<GameObject> objectRel = new List<GameObject>();

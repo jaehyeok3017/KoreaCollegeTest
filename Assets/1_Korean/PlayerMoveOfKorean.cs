@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMoveOfKorean : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 5f;
     private bool isJumping = false;
     private Rigidbody2D rb;
     public GameObject Camera;
+    public Text score;
+    private int scoreOfKorean = 100;
 
     private void Start()
     {
@@ -40,5 +43,10 @@ public class PlayerMove : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        scoreOfKorean -= 5;
+        score.text = scoreOfKorean.ToString() + "점";
     }
 }
