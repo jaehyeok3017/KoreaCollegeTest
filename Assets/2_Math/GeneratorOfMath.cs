@@ -20,5 +20,7 @@ public class GeneratorOfMath : MonoBehaviour
     private void FixedUpdate()
     {
         time++;
+
+
     }
 }
