@@ -26,7 +26,7 @@ public class GeneratorOfKorean : MonoBehaviour
         time++;
 
         if(time%80 == 0 && numOfObjInField < 20){
-            objectRel.Add(Instantiate(objectsList[Random.Range(1, 29)]));
+            objectRel.Add(Instantiate(objectsList[Random.Range(0, 29)]));
             objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-680, 680)/100,20);
             objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.3f;
             numOfObjInField++;
