@@ -22,9 +22,8 @@ public class GeneratorOfMath : MonoBehaviour
     {
         time++;
 
-<<<<<<< Updated upstream
 
-=======
+
         if(time%80 == 0 && numOfObjInField < 20){
             objectRel.Add(Instantiate(objectsListOfMath[numOfObjInField]));
 
@@ -37,6 +36,5 @@ public class GeneratorOfMath : MonoBehaviour
             //objectRel[i].transform.position += new Vector3(0,-0.6f, 0);
             //objectRel[i].transform.Rotate(0f, 0f, 7f);
         }
->>>>>>> Stashed changes
     }
 }
