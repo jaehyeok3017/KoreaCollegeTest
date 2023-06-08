@@ -11,7 +11,7 @@ public class PlayerMoveOfKorean : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject Camera;
     public Text score;
-    private int scoreOfKorean = 100;
+    public int scoreOfKorean = 100;
 
     private void Start()
     {

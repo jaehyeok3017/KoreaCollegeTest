@@ -10,6 +10,8 @@ public class PlayerMoveOfMath : MonoBehaviour
     private bool isJumping = false;
     private Rigidbody2D rb;
     public GameObject Camera;
+    public Text score;
+    public int scoreOfMath = 100;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -43,6 +45,11 @@ public class PlayerMoveOfMath : MonoBehaviour
         {
             isJumping = false;
         }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other){
+        scoreOfMath -= 5;
+        score.text = scoreOfMath.ToString() + "점";
     }
 
 }

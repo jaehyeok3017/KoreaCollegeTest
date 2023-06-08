@@ -24,17 +24,34 @@ public class GeneratorOfMath : MonoBehaviour
 
 
 
-        if(time%80 == 0 && numOfObjInField < 20){
-            objectRel.Add(Instantiate(objectsListOfMath[numOfObjInField]));
+        if(time%20 == 0 && numOfObjInField < 60){
+            objectRel.Add(Instantiate(objectsListOfMath[numOfObjInField%20]));
 
-            //objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-680, 680)/100,20);
-            //objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.3f;
+            if(numOfObjInField%3==0){
+                objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-1330, 1330)/100,4);
+            }
+            else if(numOfObjInField%3==1){
+                objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-1330, 1330)/100,-3.5f);
+            }
+            else{
+                objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-1330, 1330)/100,-3.5f);
+            }
+
+            objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.7f;
             numOfObjInField++;
         }
 
         for(int i = 0; i < numOfObjInField; i++){
-            //objectRel[i].transform.position += new Vector3(0,-0.6f, 0);
-            //objectRel[i].transform.Rotate(0f, 0f, 7f);
+            if(i%3==0){
+                objectRel[i].transform.position += new Vector3(0,-0.6f, 0);
+            }
+            else if(i%3==1){
+                objectRel[i].transform.position += new Vector3(0.4f,0, 0);
+            }
+            else{
+                objectRel[i].transform.position += new Vector3(-0.4f,0, 0);
+            }
+            objectRel[i].transform.Rotate(0f, 0f, 7f);
         }
     }
 }
