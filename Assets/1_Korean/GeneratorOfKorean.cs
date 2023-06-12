@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeneratorOfKorean : MonoBehaviour
 {
@@ -30,6 +31,10 @@ public class GeneratorOfKorean : MonoBehaviour
             objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-680, 680)/100,20);
             objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.3f;
             numOfObjInField++;
+        }
+
+        if(numOfObjInField>=20 && time>=1900){
+            SceneManager.LoadScene("MiddleScene");
         }
 
         for(int i = 0; i < numOfObjInField; i++){

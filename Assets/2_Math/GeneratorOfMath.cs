@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GeneratorOfMath : MonoBehaviour
 {
@@ -39,6 +40,10 @@ public class GeneratorOfMath : MonoBehaviour
 
             objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.7f;
             numOfObjInField++;
+        }
+
+        if(numOfObjInField>=60 && time>=1470){
+            SceneManager.LoadScene("MiddleScene");
         }
 
         for(int i = 0; i < numOfObjInField; i++){

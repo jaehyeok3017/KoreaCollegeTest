@@ -48,7 +48,7 @@ public class PlayerMoveOfMath : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        scoreOfMath -= Random.Range(1, 3);
+        scoreOfMath -= Random.Range(1, 4);
         if(scoreOfMath <= 0) scoreOfMath = 0;
         score.text = scoreOfMath.ToString() + "점";
     }
