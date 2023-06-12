@@ -11,7 +11,9 @@ public class PlayerMoveOfMath : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject Camera;
     public Text score;
-    public int scoreOfMath = 100;
+
+    public int scoreOfMath;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

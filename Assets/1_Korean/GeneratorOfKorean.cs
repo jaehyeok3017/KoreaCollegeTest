@@ -8,10 +8,12 @@ public class GeneratorOfKorean : MonoBehaviour
     public List<GameObject> objectsList = new List<GameObject>();
     private List<GameObject> objectRel = new List<GameObject>();
 
+    PlayerMoveOfKorean playerMoveOfKorean;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        playerMoveOfKorean = GameObject.Find("Player").GetComponent<PlayerMoveOfKorean>();
     }
 
     // Update is called once per frame
@@ -34,6 +36,7 @@ public class GeneratorOfKorean : MonoBehaviour
         }
 
         if(numOfObjInField>=20 && time>=1900){
+            MiddleManager.scoreOfKorean = playerMoveOfKorean.scoreOfKorean;
             SceneManager.LoadScene("MiddleScene");
         }
 

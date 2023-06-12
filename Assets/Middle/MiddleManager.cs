@@ -2,17 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MiddleManager : MonoBehaviour
+public static class MiddleManager
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public static int scoreOfKorean = 0;
+    public static int scoreOfMath = 0;
 }
