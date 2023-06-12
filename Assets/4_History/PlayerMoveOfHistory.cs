@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerMoveOfHistory : MonoBehaviour
 {
@@ -29,7 +30,13 @@ public class PlayerMoveOfHistory : MonoBehaviour
             isJumping = true;
         }
 
-        if(transform.position.y > 0){
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // TODO : 점수 연결
+            SceneManager.LoadScene("MiddleScene");
+        }
+
+        if (transform.position.y > 0){
             Camera.transform.position = new Vector3(0, transform.position.y, -10);
         }
     }
@@ -40,6 +47,12 @@ public class PlayerMoveOfHistory : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
+        }
+
+        if (collision.gameObject.CompareTag("box"))
+        {
+            //TODO : 점수 연결
+            SceneManager.LoadScene("MiddleScene");
         }
     }
 }
