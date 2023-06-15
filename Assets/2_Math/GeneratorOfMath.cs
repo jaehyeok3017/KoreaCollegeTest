@@ -45,7 +45,7 @@ public class GeneratorOfMath : MonoBehaviour
         }
 
         if(numOfObjInField>=60 && time>=1470){
-            MiddleManager.scoreOfMath = playerMoveOfMath.scoreOfMath;
+            MiddleManager.scoreOfMath += playerMoveOfMath.scoreOfMath;
             SceneManager.LoadScene("MiddleScene");
         }
 
