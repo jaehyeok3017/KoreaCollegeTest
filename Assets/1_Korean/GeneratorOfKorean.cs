@@ -35,7 +35,7 @@ public class GeneratorOfKorean : MonoBehaviour
             numOfObjInField++;
         }
 
-        if(numOfObjInField>=20 && time>=1900){
+        if(numOfObjInField>=20 && time>=1900){ //게임 끝
             MiddleManager.scoreOfKorean += playerMoveOfKorean.scoreOfKorean;
             SceneManager.LoadScene("MiddleScene");
         }

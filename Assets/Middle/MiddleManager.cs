@@ -10,4 +10,6 @@ public static class MiddleManager
     public static int scoreOfHistory = 0;
     public static int scoreOfJob = 0;
     public static int scoreOfArab = 0;
+    public static int numOfStudy = 0;
+    public static int staticMonth = 1;
 }
