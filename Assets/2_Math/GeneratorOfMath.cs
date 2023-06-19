@@ -8,11 +8,16 @@ public class GeneratorOfMath : MonoBehaviour
     public List<GameObject> objectsListOfMath = new List<GameObject>();
     private List<GameObject> objectRel = new List<GameObject>();
 
+    public GameObject IsTest;
 
     PlayerMoveOfMath playerMoveOfMath;
     void Start()
     {
         playerMoveOfMath = GameObject.Find("Player").GetComponent<PlayerMoveOfMath>();
+
+        if(MiddleManager.ISCOLLEGETESTING == 1){
+            IsTest.SetActive(true);
+        }
     }
 
     int time = 0;
@@ -45,8 +50,15 @@ public class GeneratorOfMath : MonoBehaviour
         }
 
         if(numOfObjInField>=60 && time>=1470){
-            MiddleManager.scoreOfMath += playerMoveOfMath.scoreOfMath;
-            SceneManager.LoadScene("MiddleScene");
+            if(MiddleManager.ISCOLLEGETESTING == 0){
+                MiddleManager.scoreOfMath += playerMoveOfMath.scoreOfMath;
+                SceneManager.LoadScene("MiddleScene");
+            }
+            else if(MiddleManager.ISCOLLEGETESTING == 1){
+                MiddleManager.testScoreOfMath += playerMoveOfMath.scoreOfMath;
+                IsTest.SetActive(false);
+                SceneManager.LoadScene("3_English");
+            }
         }
 
         for(int i = 0; i < numOfObjInField; i++){

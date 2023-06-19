@@ -32,14 +32,16 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreOfMath.text = MiddleManager.scoreOfMath.ToString() + "점";
-        scoreOfKorean.text = MiddleManager.scoreOfKorean.ToString() + "점";
-        scoreOfEnglish.text = MiddleManager.scoreOfEnglish.ToString() + "점";
-        scoreOfHistory.text = MiddleManager.scoreOfHistory.ToString() + "점";
-        scoreOfJob.text = MiddleManager.scoreOfJob.ToString() + "점";
-        scoreOfArab.text = MiddleManager.scoreOfArab.ToString() + "점";
+        if(MiddleManager.ISCOLLEGETESTING == 0){
+            scoreOfMath.text = MiddleManager.scoreOfMath.ToString() + "점";
+            scoreOfKorean.text = MiddleManager.scoreOfKorean.ToString() + "점";
+            scoreOfEnglish.text = MiddleManager.scoreOfEnglish.ToString() + "점";
+            scoreOfHistory.text = MiddleManager.scoreOfHistory.ToString() + "점";
+            scoreOfJob.text = MiddleManager.scoreOfJob.ToString() + "점";
+            scoreOfArab.text = MiddleManager.scoreOfArab.ToString() + "점";
 
-        Num.text = (MiddleManager.numOfStudy%2).ToString()+"/2";
-        Month.text = (MiddleManager.numOfStudy/2+1).ToString()+"월";
+            Num.text = (MiddleManager.numOfStudy%2).ToString()+"/2";
+            Month.text = (MiddleManager.numOfStudy/2+1).ToString()+"월";
+        }
     }
 }
