@@ -8,7 +8,7 @@ using System;
 public class DifferEnglishCheck : MonoBehaviour
 {
     public Sprite changeImage;
-    public int englishScore = 0;
+    public static int englishScore = 0;
 
     public List<GameObject> imgList = new List<GameObject>();
     public GameObject presentImage;
@@ -17,13 +17,13 @@ public class DifferEnglishCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        cardChange();
+        //cardChange();
         timerStart(5);
     }
 
     public Image img;
     public Sprite afterImg;
-
+    /*
     void cardChange()
     {
         System.Random rand = new System.Random(); 
@@ -45,6 +45,7 @@ public class DifferEnglishCheck : MonoBehaviour
             }
         }
     }
+    */
 
     public float limitTime;
     public bool timer = false;
@@ -62,24 +63,18 @@ public class DifferEnglishCheck : MonoBehaviour
             limitTime -= Time.deltaTime;
             if(limitTime < 0)
             {
-                gameReset();
+                gameReset(false);
             }
         }
     }
 
-    void correctImageClicked(int alongSec)
+    public static void gameReset(bool check)
     {
-        englishScore += 20;
-        gameReset();
-    }
-
-    void wrongImageClicked(int alongSec)
-    {
-        gameReset();
-    }
-
-    void gameReset()
-    {
+        if (check)
+        {
+            englishScore += 100;
+        }
+        
         SceneManager.LoadScene("MiddleScene");
     }
 }
