@@ -271,8 +271,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &168993149
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +561,9 @@ MonoBehaviour:
   scoreOfHistory: {fileID: 394430586}
   scoreOfJob: {fileID: 964457476}
   scoreOfArab: {fileID: 343262343}
+  Num: {fileID: 440796486}
+  Month: {fileID: 385652671}
+  Canvas: {fileID: 888865720}
 --- !u!1 &338813738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1347,8 +1348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &777669512
 GameObject:
   m_ObjectHideFlags: 0
@@ -1805,8 +1804,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &1025346449
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,8 +2112,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &1715489601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,8 +2260,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &1721271620
 GameObject:
   m_ObjectHideFlags: 0
@@ -2723,8 +2716,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canvas: {fileID: 888865720}
-  Num: {fileID: 440796486}
-  Month: {fileID: 385652671}
 --- !u!1 &1955285870
 GameObject:
   m_ObjectHideFlags: 0
