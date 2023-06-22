@@ -18,35 +18,11 @@ public class DifferEnglishCheck : MonoBehaviour
     void Start()
     {
         englishScore = 0;
-        //cardChange();
         timerStart(5);
     }
 
     public Image img;
     public Sprite afterImg;
-    /*
-    void cardChange()
-    {
-        System.Random rand = new System.Random(); 
-        
-        Sprite[] sprites = Resources.LoadAll<Sprite>("images");
-        int index = rand.Next(16);
-        imgList.sprite = sprites[index];
-
-        for (int i = 0; i < 16; i++)
-        {
-            if (randNum == i)
-            {
-                imgList[i].sprite = afterImg;
-            }
-
-            else
-            {
-
-            }
-        }
-    }
-    */
 
     public float limitTime;
     public bool timer = false;

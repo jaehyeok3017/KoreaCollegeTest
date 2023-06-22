@@ -17,20 +17,20 @@ public class Card : MonoBehaviour
 
     }
 
-    void Update()
+    public void OnClickButton()
     {
-        if(Input.GetMouseButton(0))
+        if (isAnswer)
         {
-            if (isAnswer)
-            {
-                DifferEnglishCheck.gameReset(true);
-            }
-
-            else
-            {
-                SceneManager.LoadScene("MiddleScene");
-            }
+            DifferEnglishCheck.gameReset(true);
         }
 
+        else
+        {
+            SceneManager.LoadScene("MiddleScene");
+        }
+    }
+
+    void Update()
+    {
     }
 }
