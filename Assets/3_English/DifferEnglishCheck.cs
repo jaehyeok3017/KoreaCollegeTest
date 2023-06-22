@@ -8,7 +8,7 @@ using System;
 public class DifferEnglishCheck : MonoBehaviour
 {
     public Sprite changeImage;
-    public static int englishScore = 0;
+    public int englishScore = 0;
 
     public List<GameObject> imgList = new List<GameObject>();
     public GameObject presentImage;
@@ -69,11 +69,12 @@ public class DifferEnglishCheck : MonoBehaviour
         }
     }
 
-    public static void gameReset(bool check)
+    public void gameReset(bool check)
     {
         if (check)
         {
-            englishScore += 100;
+            englishScore = 100;
+            Debug.Log("333");
         }
         
         MiddleManager.scoreOfEnglish += englishScore;

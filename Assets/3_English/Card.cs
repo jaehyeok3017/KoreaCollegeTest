@@ -8,6 +8,14 @@ public class Card : MonoBehaviour
     public string answer;
     public bool isAnswer;
 
+    DifferEnglishCheck DifferEnglishCheck;
+
+    void Start()
+    {
+        DifferEnglishCheck = GameObject.Find("Manager").GetComponent<DifferEnglishCheck>();
+
+    }
+
     void Update()
     {
         if(Input.GetMouseButton(0))
