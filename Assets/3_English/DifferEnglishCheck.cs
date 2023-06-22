@@ -17,6 +17,7 @@ public class DifferEnglishCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        englishScore = 0;
         //cardChange();
         timerStart(5);
     }
@@ -75,6 +76,8 @@ public class DifferEnglishCheck : MonoBehaviour
             englishScore += 100;
         }
         
+        MiddleManager.scoreOfEnglish += englishScore;
+
         SceneManager.LoadScene("MiddleScene");
     }
 }
