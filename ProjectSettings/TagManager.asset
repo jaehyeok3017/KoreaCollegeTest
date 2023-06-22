@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - box
   - c
+  - 5
+  - 4
+  - 3
   layers:
   - Default
   - TransparentFX
