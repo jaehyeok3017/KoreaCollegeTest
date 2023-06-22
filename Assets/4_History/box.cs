@@ -23,6 +23,7 @@ public class box : MonoBehaviour
         if (collision.gameObject.CompareTag("box"))
         {
             historyScore += 100;
+            MiddleManager.scoreOfHistory += historyScore;
             SceneManager.LoadScene("MiddleScene");
         }
     }

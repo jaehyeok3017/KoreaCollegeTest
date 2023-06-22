@@ -12,6 +12,8 @@ public class PlayerMoveOfHistory : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject Camera;
 
+    box box;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -30,12 +32,6 @@ public class PlayerMoveOfHistory : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            // TODO : 점수 연결
-            SceneManager.LoadScene("MiddleScene");
-        }
-
         if (transform.position.y > 0){
             Camera.transform.position = new Vector3(0, transform.position.y, -10);
         }
@@ -47,12 +43,6 @@ public class PlayerMoveOfHistory : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isJumping = false;
-        }
-
-        if (collision.gameObject.CompareTag("box"))
-        {
-            //TODO : 점수 연결
-            SceneManager.LoadScene("MiddleScene");
         }
     }
 }
