@@ -64,7 +64,7 @@ public class DifferEnglishCheck : MonoBehaviour
             limitTime -= Time.deltaTime;
             if(limitTime < 0)
             {
-                gameReset(false);
+                SceneManager.LoadScene("MiddleScene");
             }
         }
     }
@@ -74,11 +74,8 @@ public class DifferEnglishCheck : MonoBehaviour
         if (check)
         {
             englishScore = 100;
-            Debug.Log("333");
+            MiddleManager.scoreOfEnglish += englishScore;
+            SceneManager.LoadScene("MiddleScene");
         }
-        
-        MiddleManager.scoreOfEnglish += englishScore;
-
-        SceneManager.LoadScene("MiddleScene");
     }
 }
