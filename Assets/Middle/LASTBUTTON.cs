@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class LASTBUTTON : MonoBehaviour
 {
 
-    public List<Image> imgListOfEnd = new List<Image>();
+    public List<GameObject> imgListOfEnd = new List<GameObject>();
+
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,6 @@ public class LASTBUTTON : MonoBehaviour
 
         int judge = score/42;
 
-        //imgListOfEnd[judge]
+        imgListOfEnd[judge].SetActive(true);
     }
 }

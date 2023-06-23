@@ -1601,7 +1601,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 20}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1508636060
@@ -1627,7 +1627,7 @@ MonoBehaviour:
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 60
-    m_FontStyle: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 6
     m_MaxSize: 60
@@ -1637,7 +1637,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC5D4\uB529 \uBCF4\uAE30"
+  m_Text: "\uB300\uD559\uAD50 \uC9C0\uC6D0"
 --- !u!222 &1508636061
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1884,7 +1884,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1921064218}
   - component: {fileID: 1921064219}
-  - component: {fileID: 1921064220}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -1925,33 +1924,6 @@ MonoBehaviour:
   scoreOfHistory: {fileID: 1059982001}
   scoreOfJob: {fileID: 985248913}
   scoreOfArab: {fileID: 1942994630}
---- !u!114 &1921064220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921064217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4a04152bbbee1f94bbd51c9c8198e3c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  imgListOfEnd:
-  - {fileID: 394620923}
-  - {fileID: 1156820091}
-  - {fileID: 1883940780}
-  - {fileID: 1855301490}
-  - {fileID: 318127338}
-  - {fileID: 1288636499}
-  - {fileID: 648482011}
-  - {fileID: 338495059}
-  - {fileID: 2041903735}
-  - {fileID: 1838215777}
-  - {fileID: 1484609728}
-  - {fileID: 680050568}
-  - {fileID: 2052967872}
-  - {fileID: 399786374}
 --- !u!1 &1942994628
 GameObject:
   m_ObjectHideFlags: 0
@@ -2369,8 +2341,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 70ce67e982fddb74289530c17f57aac3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -2399,4 +2371,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a04152bbbee1f94bbd51c9c8198e3c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imgListOfEnd: []
+  imgListOfEnd:
+  - {fileID: 399786373}
+  - {fileID: 2052967869}
+  - {fileID: 680050565}
+  - {fileID: 1484609725}
+  - {fileID: 1838215774}
+  - {fileID: 2041903732}
+  - {fileID: 338495056}
+  - {fileID: 648482008}
+  - {fileID: 1288636496}
+  - {fileID: 318127335}
+  - {fileID: 1855301487}
+  - {fileID: 1883940777}
+  - {fileID: 1156820088}
+  - {fileID: 394620921}
+  judge: 0
