@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class DifferEnglishCheck : MonoBehaviour
+public class DifferEnglishCheckOfArab : MonoBehaviour
 {
-    public int englishScore = 0;
+    public int arabScore = 0;
     public GameObject presentImage; 
     public GameObject isTest;
     public GameObject Not;
@@ -16,7 +16,7 @@ public class DifferEnglishCheck : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        englishScore = 0;
+        arabScore = 0;
         timerStart(5);
 
         int ansNum = Random.Range(3, 31);
@@ -71,15 +71,15 @@ public class DifferEnglishCheck : MonoBehaviour
     {
         if (check)
         {
-            englishScore = 100;
+            arabScore = 100;
 
             if(MiddleManager.ISCOLLEGETESTING == 1){
-                MiddleManager.testScoreOfEnglish += englishScore;
+                MiddleManager.testScoreOfArab += arabScore;
                 SceneManager.LoadScene("4_History");
                 isTest.SetActive(false);
             }
             else{
-                MiddleManager.scoreOfEnglish += englishScore;
+                MiddleManager.scoreOfArab += arabScore;
                 SceneManager.LoadScene("MiddleScene");
             }
         }
