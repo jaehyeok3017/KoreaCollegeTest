@@ -32,7 +32,7 @@ public class PlayerMoveOfHistory : MonoBehaviour
             isJumping = true;
         }
 
-        if (Input.GetKeyDown(KeyCode.Return))
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             SceneManager.LoadScene("MiddleScene");
         }
