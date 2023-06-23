@@ -30,7 +30,7 @@ public class GeneratorOfMath : MonoBehaviour
     {
         time++;
 
-        if(time%20 == 0 && numOfObjInField < 60){
+        if(time%10 == 0 && numOfObjInField < 60){
             objectRel.Add(Instantiate(objectsListOfMath[numOfObjInField%20]));
 
             if(numOfObjInField%3==0){
@@ -47,7 +47,7 @@ public class GeneratorOfMath : MonoBehaviour
             numOfObjInField++;
         }
 
-        if(numOfObjInField>=60 && time>=1470){
+        if(numOfObjInField>=60 && time>=735){
             if(MiddleManager.ISCOLLEGETESTING == 0){
                 MiddleManager.scoreOfMath += playerMoveOfMath.scoreOfMath;
                 SceneManager.LoadScene("MiddleScene");

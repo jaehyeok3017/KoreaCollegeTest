@@ -16,8 +16,8 @@ public class ManagerOfEnd : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        scoreOfMath.text = MiddleManager.testScoreOfKorean.ToString() + "점";
-        scoreOfKorean.text = MiddleManager.testScoreOfMath.ToString() + "점";
+        scoreOfKorean.text = MiddleManager.testScoreOfKorean.ToString() + "점";
+        scoreOfMath.text = MiddleManager.testScoreOfMath.ToString() + "점";
         scoreOfEnglish.text = MiddleManager.testScoreOfEnglish.ToString() + "점";
         scoreOfHistory.text = MiddleManager.testScoreOfHistory.ToString() + "점";
         scoreOfJob.text = MiddleManager.testScoreOfJob.ToString() + "점";

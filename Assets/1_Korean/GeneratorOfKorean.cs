@@ -34,14 +34,14 @@ public class GeneratorOfKorean : MonoBehaviour
     void FixedUpdate(){
         time++;
 
-        if(time%55 == 0 && numOfObjInField < 20){
+        if(time%35 == 0 && numOfObjInField < 20){
             objectRel.Add(Instantiate(objectsList[Random.Range(0, 29)]));
             objectRel[numOfObjInField].transform.position = new Vector2(Random.Range(-680, 680)/100,20);
             objectRel[numOfObjInField].transform.localScale = objectRel[numOfObjInField].transform.localScale * 1.3f;
             numOfObjInField++;
         }
 
-        if(numOfObjInField>=20 && time>=1300){ //게임 끝
+        if(numOfObjInField>=20 && time>=900){ //게임 끝
             if(MiddleManager.ISCOLLEGETESTING == 0){
                 MiddleManager.scoreOfKorean += playerMoveOfKorean.scoreOfKorean;
                 SceneManager.LoadScene("MiddleScene");
