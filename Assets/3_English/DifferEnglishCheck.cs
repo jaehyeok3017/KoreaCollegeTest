@@ -3,16 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using System;
 
 public class DifferEnglishCheck : MonoBehaviour
 {
-    public Sprite changeImage;
     public int englishScore = 0;
-
-    public List<GameObject> imgList = new List<GameObject>();
-    public GameObject presentImage;
-
+    public GameObject presentImage; 
+    public GameObject isTest;
+    public GameObject Not;
+    public GameObject Answer;
+    public GameObject Mother;
 
     // Start is called before the first frame update
     void Start()
@@ -20,18 +19,28 @@ public class DifferEnglishCheck : MonoBehaviour
         englishScore = 0;
         timerStart(5);
 
+        int ansNum = Random.Range(3, 31);
+
+        for(int i = 0; i < 9; i++){
+            for(int j = 0; j < 9; j++){
+                if(i*9+j == ansNum){
+                    GameObject M = Instantiate(Answer, new Vector3(120*i - 120*4,120*j - 120*4,0), Quaternion.identity);
+                    M.transform.SetParent(Mother.transform, false);
+                }
+                else{
+                    GameObject M = Instantiate(Not, new Vector3(120*i - 120*4,120*j - 120*4,0), Quaternion.identity);
+                    M.transform.SetParent(Mother.transform, false);
+                }
+            }
+        }
+
         if(MiddleManager.ISCOLLEGETESTING == 1){
             isTest.SetActive(true);
         }
     }
 
-    public Image img;
-    public Sprite afterImg;
-
-    public GameObject isTest;
-
-    public float limitTime;
-    public bool timer = false;
+    float limitTime;
+    bool timer = false;
     void timerStart(int sec)
     {
         limitTime = 4;
@@ -41,6 +50,7 @@ public class DifferEnglishCheck : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if (timer)
         {
             limitTime -= Time.deltaTime;

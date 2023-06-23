@@ -6,36 +6,23 @@ using UnityEngine.EventSystems;
 
 public class Card : MonoBehaviour
 {
-    public string answer;
     public bool isAnswer;
 
     DifferEnglishCheck DifferEnglishCheck;
-
     void Start()
     {
         DifferEnglishCheck = GameObject.Find("Manager").GetComponent<DifferEnglishCheck>();
-
     }
-
-    public void OnClickButton()
-    {
-        if (isAnswer)
-        {
-            DifferEnglishCheck.gameReset(true);
-        }
-
-        else
-        {
-            if(MiddleManager.ISCOLLEGETESTING == 1){
-                SceneManager.LoadScene("4_History");
-            }
-            else{
-                SceneManager.LoadScene("MiddleScene");
-            }
-        }
-    }
-
     void Update()
     {
+
+    }
+    public void OnClick(){
+        if(isAnswer){
+            DifferEnglishCheck.gameReset(true);
+        }
+        else{
+            DifferEnglishCheck.gameReset(false);
+        }
     }
 }
