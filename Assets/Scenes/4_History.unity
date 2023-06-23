@@ -4445,6 +4445,7 @@ MonoBehaviour:
   moveSpeed: 10
   jumpForce: 10
   Camera: {fileID: 1120900391}
+  isTest: {fileID: 1840975417}
 --- !u!114 &1913964858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4457,6 +4458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9085d00cef4a094da5233bbf0e1debf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isTest: {fileID: 1840975417}
 --- !u!1 &1918356850
 GameObject:
   m_ObjectHideFlags: 0
