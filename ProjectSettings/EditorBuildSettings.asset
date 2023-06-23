@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CollegeTest1.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/0_Story.unity
+    guid: b9c19089feb435c4aad8fa21d1bdeb6b
   - enabled: 1
     path: Assets/Scenes/MiddleScene.unity
     guid: c53fbdcc451be294ca3594c03e4a0b84
@@ -29,4 +29,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/1_Korean.unity
     guid: 7919b8900d4063240be259a8152eed65
+  - enabled: 1
+    path: Assets/Scenes/CollegeTest1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 497ba7641b2b8064794c24429069def5
   m_configObjects: {}

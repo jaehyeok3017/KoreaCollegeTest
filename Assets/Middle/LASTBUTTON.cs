@@ -22,10 +22,10 @@ public class LASTBUTTON : MonoBehaviour
     }
 
     public void OnClick() {
-        int score = MiddleManager.testScoreOfKorean + MiddleManager.testScoreOfMath + MiddleManager.testScoreOfEnglish + MiddleManager.testScoreOfHistory
-        +MiddleManager.testScoreOfJob + MiddleManager.testScoreOfArab;
+        float score = MiddleManager.testScoreOfKorean * 1.8f + MiddleManager.testScoreOfMath *2.4f + MiddleManager.testScoreOfEnglish * 0.6f 
+        + MiddleManager.testScoreOfHistory * 0.3f +MiddleManager.testScoreOfJob * 0.6f + MiddleManager.testScoreOfArab * 0.3f;
 
-        int judge = score/42;
+        int judge = (int)(score/42);
 
         imgListOfEnd[judge].SetActive(true);
     }
