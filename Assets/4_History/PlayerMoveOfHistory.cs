@@ -34,7 +34,12 @@ public class PlayerMoveOfHistory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            SceneManager.LoadScene("MiddleScene");
+            if(MiddleManager.ISCOLLEGETESTING == 1){
+                SceneManager.LoadScene("5_Job");
+            }
+            else{
+                SceneManager.LoadScene("MiddleScene");
+            }
         }
 
         if (transform.position.y > 0){

@@ -57,7 +57,7 @@ public class DifferEnglishCheckOfArab : MonoBehaviour
             if(limitTime < 0)
             {
                 if(MiddleManager.ISCOLLEGETESTING == 1){
-                    SceneManager.LoadScene("4_History");
+                    SceneManager.LoadScene("Ending");
                     isTest.SetActive(false);
                 }
                 else{
@@ -75,7 +75,7 @@ public class DifferEnglishCheckOfArab : MonoBehaviour
 
             if(MiddleManager.ISCOLLEGETESTING == 1){
                 MiddleManager.testScoreOfArab += arabScore;
-                SceneManager.LoadScene("4_History");
+                SceneManager.LoadScene("Ending");
                 isTest.SetActive(false);
             }
             else{

@@ -21,8 +21,14 @@ public class box : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("box"))
         {
-            MiddleManager.scoreOfHistory += 100;
-            SceneManager.LoadScene("MiddleScene");
+            if(MiddleManager.ISCOLLEGETESTING == 1){
+                MiddleManager.testScoreOfHistory += 100;
+                SceneManager.LoadScene("5_Job");
+            }
+            else{
+                MiddleManager.scoreOfHistory += 100;
+                SceneManager.LoadScene("MiddleScene");   
+            }
         }
     }
 }
