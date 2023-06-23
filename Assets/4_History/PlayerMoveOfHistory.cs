@@ -32,6 +32,11 @@ public class PlayerMoveOfHistory : MonoBehaviour
             isJumping = true;
         }
 
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            SceneManager.LoadScene("MiddleScene");
+        }
+
         if (transform.position.y > 0){
             Camera.transform.position = new Vector3(0, transform.position.y, -10);
         }

@@ -5,7 +5,6 @@ using UnityEngine.SceneManagement;
 
 public class box : MonoBehaviour
 {
-    public int historyScore = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,8 +21,7 @@ public class box : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("box"))
         {
-            historyScore += 100;
-            MiddleManager.scoreOfHistory += historyScore;
+            MiddleManager.scoreOfHistory += 100;
             SceneManager.LoadScene("MiddleScene");
         }
     }
