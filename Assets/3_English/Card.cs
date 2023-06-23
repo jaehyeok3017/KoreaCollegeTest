@@ -26,7 +26,12 @@ public class Card : MonoBehaviour
 
         else
         {
-            SceneManager.LoadScene("MiddleScene");
+            if(MiddleManager.ISCOLLEGETESTING == 1){
+                SceneManager.LoadScene("4_History");
+            }
+            else{
+                SceneManager.LoadScene("MiddleScene");
+            }
         }
     }
 

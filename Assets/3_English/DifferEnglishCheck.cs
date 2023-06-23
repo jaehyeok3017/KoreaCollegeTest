@@ -19,10 +19,16 @@ public class DifferEnglishCheck : MonoBehaviour
     {
         englishScore = 0;
         timerStart(5);
+
+        if(MiddleManager.ISCOLLEGETESTING == 1){
+            isTest.SetActive(true);
+        }
     }
 
     public Image img;
     public Sprite afterImg;
+
+    public GameObject isTest;
 
     public float limitTime;
     public bool timer = false;
@@ -40,7 +46,13 @@ public class DifferEnglishCheck : MonoBehaviour
             limitTime -= Time.deltaTime;
             if(limitTime < 0)
             {
-                SceneManager.LoadScene("MiddleScene");
+                if(MiddleManager.ISCOLLEGETESTING == 1){
+                    SceneManager.LoadScene("4_History");
+                    isTest.SetActive(false);
+                }
+                else{
+                    SceneManager.LoadScene("MiddleScene");
+                }
             }
         }
     }
@@ -50,8 +62,16 @@ public class DifferEnglishCheck : MonoBehaviour
         if (check)
         {
             englishScore = 100;
-            MiddleManager.scoreOfEnglish += englishScore;
-            SceneManager.LoadScene("MiddleScene");
+
+            if(MiddleManager.ISCOLLEGETESTING == 1){
+                MiddleManager.testScoreOfEnglish += englishScore;
+                SceneManager.LoadScene("4_History");
+                isTest.SetActive(false);
+            }
+            else{
+                MiddleManager.scoreOfEnglish += englishScore;
+                SceneManager.LoadScene("MiddleScene");
+            }
         }
     }
 }
