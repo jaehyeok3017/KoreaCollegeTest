@@ -59,14 +59,14 @@ public class DifferEnglishCheckOfArab : MonoBehaviour
                 int junk = Random.Range(0, 600);
 
                 if(MiddleManager.ISCOLLEGETESTING == 1){
-                    if(junk >= MiddleManager.scoreOfArab){
+                    if(junk <= MiddleManager.scoreOfArab){
                         MiddleManager.testScoreOfArab += 100;
                     } 
                     isTest.SetActive(false);
                     SceneManager.LoadScene("Ending");
                 }
                 else{
-                    if(junk >= MiddleManager.scoreOfArab){
+                    if(junk <= MiddleManager.scoreOfArab){
                         MiddleManager.scoreOfArab += 100;
                     }
                     SceneManager.LoadScene("MiddleScene");

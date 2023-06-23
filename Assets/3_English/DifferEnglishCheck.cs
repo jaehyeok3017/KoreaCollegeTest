@@ -59,14 +59,14 @@ public class DifferEnglishCheck : MonoBehaviour
                 int junk = Random.Range(0, 600);
 
                 if(MiddleManager.ISCOLLEGETESTING == 1){
-                    if(junk >= MiddleManager.scoreOfEnglish){
+                    if(junk <= MiddleManager.scoreOfEnglish){
                         MiddleManager.testScoreOfEnglish += 100;
                     } 
                     isTest.SetActive(false);
                     SceneManager.LoadScene("4_History");
                 }
                 else{
-                    if(junk >= MiddleManager.scoreOfEnglish){
+                    if(junk <= MiddleManager.scoreOfEnglish){
                         MiddleManager.scoreOfEnglish += 100;
                     } 
                     SceneManager.LoadScene("MiddleScene");

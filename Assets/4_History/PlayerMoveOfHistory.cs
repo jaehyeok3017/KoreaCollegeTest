@@ -37,11 +37,19 @@ public class PlayerMoveOfHistory : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
+            int junk = Random.Range(0, 600);
+
             if(MiddleManager.ISCOLLEGETESTING == 1){
+                if(junk <= MiddleManager.scoreOfHistory){
+                    MiddleManager.testScoreOfHistory += 100;
+                } 
                 isTest.SetActive(false);
                 SceneManager.LoadScene("5_Job");
             }
             else{
+                if(junk <= MiddleManager.scoreOfHistory){
+                    MiddleManager.scoreOfHistory += 100;
+                } 
                 SceneManager.LoadScene("MiddleScene");
             }
         }

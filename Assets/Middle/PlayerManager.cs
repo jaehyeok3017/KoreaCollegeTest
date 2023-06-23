@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
 
-        if(MiddleManager.numOfStudy/2+1 == 4){
+        if(MiddleManager.numOfStudy/2+1 == 11){
             SceneManager.LoadScene("CollegeTest1");
 
             Canvas.SetActive(false);
