@@ -11,12 +11,15 @@ public class PlayerMoveOfHistory : MonoBehaviour
     private bool isJumping = false;
     private Rigidbody2D rb;
     public GameObject Camera;
-
+    public GameObject isTest;
     box box;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        if(MiddleManager.ISCOLLEGETESTING == 1){
+            isTest.SetActive(true);
+        }
     }
 
     private void Update()
@@ -35,6 +38,7 @@ public class PlayerMoveOfHistory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if(MiddleManager.ISCOLLEGETESTING == 1){
+                isTest.SetActive(false);
                 SceneManager.LoadScene("5_Job");
             }
             else{

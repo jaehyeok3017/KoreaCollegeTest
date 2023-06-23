@@ -46,7 +46,9 @@ public class PlayerMoveOfKorean : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other){
-        scoreOfKorean -= 5;
-        score.text = scoreOfKorean.ToString() + "점";
+        if(Random.Range(0, 800) >= MiddleManager.scoreOfKorean){
+            scoreOfKorean -= 5;
+            score.text = scoreOfKorean.ToString() + "점";
+        }
     }
 }

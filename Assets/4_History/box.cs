@@ -17,12 +17,15 @@ public class box : MonoBehaviour
         
     }
 
+    public GameObject isTest;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("box"))
         {
             if(MiddleManager.ISCOLLEGETESTING == 1){
                 MiddleManager.testScoreOfHistory += 100;
+                isTest.SetActive(false);
                 SceneManager.LoadScene("5_Job");
             }
             else{

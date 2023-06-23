@@ -56,11 +56,19 @@ public class DifferEnglishCheckOfArab : MonoBehaviour
             limitTime -= Time.deltaTime;
             if(limitTime < 0)
             {
+                int junk = Random.Range(0, 600);
+
                 if(MiddleManager.ISCOLLEGETESTING == 1){
-                    SceneManager.LoadScene("Ending");
+                    if(junk >= MiddleManager.scoreOfArab){
+                        MiddleManager.testScoreOfArab += 100;
+                    } 
                     isTest.SetActive(false);
+                    SceneManager.LoadScene("Ending");
                 }
                 else{
+                    if(junk >= MiddleManager.scoreOfArab){
+                        MiddleManager.scoreOfArab += 100;
+                    }
                     SceneManager.LoadScene("MiddleScene");
                 }
             }

@@ -30,8 +30,6 @@ public class GeneratorOfMath : MonoBehaviour
     {
         time++;
 
-
-
         if(time%20 == 0 && numOfObjInField < 60){
             objectRel.Add(Instantiate(objectsListOfMath[numOfObjInField%20]));
 
